@@ -1,0 +1,2 @@
+json.extract! user, :id, :nombre, :apellido, :numero, :tipo_documentp, :documento, :email, :crypted_password, :salt, :edad, :cooperative_id, :created_at, :updated_at
+json.url user_url(user, format: :json)

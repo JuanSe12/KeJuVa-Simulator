@@ -1,0 +1,21 @@
+<div class="form-three widget-shadow">
+  <div class=" panel-body-inputin">
+    <%= form_for(@cooperative, :html => {:id => "checkout-form", :class => "form-horizontal", :novalidate => "novalidate"}) do |f| %>
+      <div class="form-group">
+        <div class="col col-4">
+        <div class="input-group">             
+            <span class="input-group-addon">
+              <i class="icon-prepend fa fa-keyboard-o" aria-hidden="true"></i>
+            </span>
+            <%= f.text_field :nombre, :class => "form-control1", :placeholder => "Ingrese Nombre" %>
+          </div>
+        </div>
+      </div>
+      <center>
+      <div class="actions">
+        <%= f.submit 'Aceptar',  class: "btn btn-primary"   %>
+      </div>
+      </center>
+    <% end %>
+  </div>
+</div>

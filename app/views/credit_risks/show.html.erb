@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Salario basico:</strong>
+  <%= @credit_risk.salario_basico %>
+</p>
+
+<p>
+  <strong>Gastos:</strong>
+  <%= @credit_risk.gastos %>
+</p>
+
+<p>
+  <strong>Entradas adicionales:</strong>
+  <%= @credit_risk.entradas_adicionales %>
+</p>
+
+<p>
+  <strong>Personas acargo:</strong>
+  <%= @credit_risk.personas_acargo %>
+</p>
+
+<p>
+  <strong>Cooperative:</strong>
+  <%= @credit_risk.cooperative.nombre %>
+</p>
+
+<%= link_to 'Edit', edit_credit_risk_path(@credit_risk) %> |
+<%= link_to 'Back', credit_risks_path %>

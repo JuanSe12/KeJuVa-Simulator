@@ -1,0 +1,61 @@
+<% if current_user.edad >= 70 %>
+	
+<h1>No tiene permitido hacer un prestamo(edad supera el limite permitido)</h1>
+<% else %>
+Cooperativa:
+<h1><%= @cooperativa1.nombre %></h1>
+<select id="tipo">
+	<option>seleccion tipo</option>
+	<option value="3.2">micro credito</option>
+	<option value="2.5">libre inversion</option>
+	<option value="1.5">prestamo estudiantil</option>
+</select>
+<select id="valor_credito">
+	<option>seleccion valor</option>
+	<option value="1000000">1000000</option>
+	<option value="3000000">3000000</option>
+	<option value="5000000">5000000</option>
+	<option value="7000000">7000000</option>
+	<option value="10000000">10000000</option>
+</select>
+<select id="plazo_credito">
+	<option>seleccion plazo</option>
+	<option value="6">6 meses</option>
+	<option value="12">12 meses</option>
+	<option value="18">18 meses</option>
+	<option value="24">24 meses</option>
+	<option value="36">36 meses</option>
+</select>
+<input type="button" name="calculo" value="calcular" onclick="calculos()">
+resultado=<input type="text" id="resultado" value=""></label>
+
+<br>
+<br>
+
+Cooperativa:
+<h1><%= @cooperativa2.nombre %></h1>
+<select id="tipo2">
+	<option>seleccion tipo</option>
+	<option value="43.53">micro credito</option>
+	<option value="1.5">libre inversion</option>
+	<option value="1.0">prestamo estudiantil</option>
+</select>
+<select id="valor_credito2">
+	<option>seleccion valor</option>
+	<option value="1000000">1000000</option>
+	<option value="3000000">3000000</option>
+	<option value="5000000">5000000</option>
+	<option value="7000000">7000000</option>
+	<option value="10000000">10000000</option>
+</select>
+<select id="plazo_credito2">
+	<option>seleccion plazo</option>
+	<option value="6">6 meses</option>
+	<option value="12">12 meses</option>
+	<option value="18">18 meses</option>
+	<option value="24">24 meses</option>
+	<option value="36">36 meses</option>
+</select>
+<input type="button" name="calculo" value="calcular" onclick="calculos2()">
+resultado=<input type="text" id="resultado2" value=""></label>
+<% end %>

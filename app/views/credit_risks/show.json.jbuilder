@@ -1,0 +1,1 @@
+json.partial! "credit_risks/credit_risk", credit_risk: @credit_risk

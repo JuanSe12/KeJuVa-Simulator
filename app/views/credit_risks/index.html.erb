@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listado De Cooperativas</h1>
+
+<div class="bs-example widget-shadow" data-example-id="contextual-table"> 
+<table class="table">
+  <thead>
+    <tr>
+      <th>Salario basico</th>
+      <th>Gastos</th>
+      <th>Entradas adicionales</th>
+      <th>Personas acargo</th>
+      <th>Cooperativa</th>
+      <th colspan="3">Opciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @credit_risks.each do |credit_risk| %>
+      <tr>
+        <td><%= credit_risk.salario_basico %></td>
+        <td><%= credit_risk.gastos %></td>
+        <td><%= credit_risk.entradas_adicionales %></td>
+        <td><%= credit_risk.personas_acargo %></td>
+        <td><%= credit_risk.cooperative.nombre %></td>
+        <td>
+          <div class="btn-group">
+            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Acciones
+            </button>
+            <div class="dropdown-menu">
+              <center>
+                <%= link_to 'Detalle', credit_risk, class: 'btn btn-info' %>
+                <br>
+                <div class="dropdown-divider"></div>
+                <%= link_to 'Editar', edit_credit_risk_path(credit_risk), class: 'btn btn-warning' %>
+                <br>
+                <div class="dropdown-divider"></div>
+                <%= link_to 'Eliminar', credit_risk, method: :delete, data: { confirm: 'Estas Segur@?' }, class: 'btn btn-danger' %>
+              </center>
+            </div>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<br>
+
+<%= link_to 'Agregar Riesgo Crediticio', new_credit_risk_path, class: 'btn btn-primary' %>

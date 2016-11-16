@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  salario_basico: 1
+  gastos: 1
+  entradas_adicionales: MyText
+  personas_acargo: 1
+  cooperative_id: 
+
+two:
+  salario_basico: 1
+  gastos: 1
+  entradas_adicionales: MyText
+  personas_acargo: 1
+  cooperative_id: 
